@@ -8,3 +8,13 @@ c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\obj\Debu
 c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\obj\Debug\Wifibot.exe
 c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\obj\Debug\Wifibot.pdb
 c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\obj\Debug\Wifibot.Commandes.resources
+C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\bin\Debug\Wifibot.exe.config
+C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\obj\Debug\Wifibot.exe
+C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\obj\Debug\Wifibot.pdb
+C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\obj\Debug\Wifibot.csprojResolveAssemblyReference.cache
+C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\obj\Debug\Wifibot.Commandes.resources
+C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\obj\Debug\Wifibot.Connexion.resources
+C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\obj\Debug\Wifibot.Properties.Resources.resources
+C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\obj\Debug\Wifibot.csproj.GenerateResource.Cache
+C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\bin\Debug\Wifibot.exe
+C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\bin\Debug\Wifibot.pdb

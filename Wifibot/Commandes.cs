@@ -301,5 +301,13 @@ namespace Wifibot
             }
             return (Crc);
         }
+
+        private void Commandes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            t1.Dispose();
+            c.Close();
+            this.Dispose();
+        }
+
     }
 }

@@ -39,6 +39,8 @@ namespace Wifibot
         private void button1_Click(object sender, EventArgs e)
         {
             simulateur();
+            for (int i = 0; i < 5000; i++) { }
+            
             IPAddress ip2 = IPAddress.Parse("127.0.0.1");
             IPEndPoint ipEnd2 = new IPEndPoint(ip2, 15020);
             Socket ClientSocket2 = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -49,7 +51,7 @@ namespace Wifibot
                 MessageBox.Show("Connexion au simulateur ok");
                 Commandes c = new Commandes(ClientSocket2,0);
                 c.Show();
-                this.Hide();
+                
             }
             else
             {
@@ -68,11 +70,9 @@ namespace Wifibot
                ClientSocket.Connect(ipEnd);
                if (ClientSocket.Connected)
                {
-
                    MessageBox.Show("Connexion OK");
                    Commandes c = new Commandes(ClientSocket,1);
                    c.Show();
-                   this.Hide();
                }
                else
                {

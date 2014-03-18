@@ -117,6 +117,7 @@
             this.Controls.Add(this.btnAvancer);
             this.Name = "Commandes";
             this.Text = "Commandes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Commandes_FormClosing);
             this.Load += new System.EventHandler(this.Commandes_Load);
             this.ResumeLayout(false);
 

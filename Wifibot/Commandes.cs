@@ -24,15 +24,24 @@ namespace Wifibot
         private int updateSpeed;
 
 
-        public Commandes(Socket ClientSocket)
+        public Commandes(Socket ClientSocket, int application)
         {
-            c = ClientSocket;
-            InitializeComponent();
-            sens = 0;
-            updateSpeed = 0;
-            t1 = new System.Windows.Forms.Timer();
-            InitializeTimer();
-            
+            if (application == 1)
+            {
+                c = ClientSocket;
+                InitializeComponent();
+                sens = 0;
+                t1 = new System.Windows.Forms.Timer();
+                InitializeTimer();
+            }
+            else if (application == 0)
+            {
+                c = ClientSocket;
+                InitializeComponent();
+                sens = 0;
+                t1 = new System.Windows.Forms.Timer();
+                InitializeTimer();
+            }
         }
 
         private void InitializeTimer()
@@ -45,10 +54,12 @@ namespace Wifibot
         private void Tick(object sender, EventArgs e)
         {
             updateSpeed += 8;
-            MoveRobot(updateSpeed);
+
+            //MoveRobotSim();
+            MoveRobot();
         }
 
-        private void MoveRobot(int speed)
+        private void MoveRobotSim()
         {
             byte[] message2 = new byte[2];
             switch(sens)
@@ -85,6 +96,134 @@ namespace Wifibot
                     break;
             }
         }
+        private void MoveRobot()
+        {
+            byte[] message = new byte[9];
+            byte[] tmp = new byte[6];
+            int crcResult;
+            switch (sens)
+            {
+                  
+                case 1: //Avancer
+                   message[0] = 255;
+                   message[1] = 0x07;
+                   message[2] = 120;
+                   message[3] = 0;
+                   message[4] = 120;
+                   message[5] = 0;
+                   message[6] = 80;
+
+                   tmp[0] = 0x07;
+                   tmp[1] = 120;
+                   tmp[2] = 0;
+                   tmp[3] = 120;
+                   tmp[4] = 0;
+                   tmp[5] = 80;
+
+                   crcResult = Crc16(tmp);
+
+                   message[7] = (byte)crcResult;
+                   message[8] = (byte)(crcResult >> 8);
+                   c.Send(message);
+                   break;
+
+                case 2: //A gauche
+                   message[0] = 255;
+                   message[1] = 0x07;
+                   message[2] = 80;
+                   message[3] = 0;
+                   message[4] = 120;
+                   message[5] = 0;
+                   message[6] = 80;
+
+                   
+                   tmp[0] = 0x07;
+                   tmp[1] = 80;
+                   tmp[2] = 0;
+                   tmp[3] = 120;
+                   tmp[4] = 0;
+                   tmp[5] = 80;
+
+                   crcResult = Crc16(tmp);
+
+                   message[7] = (byte)crcResult;
+                   message[8] = (byte)(crcResult >> 8);
+                   c.Send(message);
+                   break;
+
+                case 3://A droite
+                   message[0] = 255;
+                   message[1] = 0x07;
+                   message[2] = 120;
+                   message[3] = 0;
+                   message[4] = 80;
+                   message[5] = 0;
+                   message[6] = 80;
+
+                   
+                   tmp[0] = 0x07;
+                   tmp[1] = 120;
+                   tmp[2] = 0;
+                   tmp[3] = 80;
+                   tmp[4] = 0;
+                   tmp[5] = 80;
+
+                   crcResult = Crc16(tmp);
+
+                   message[7] = (byte)crcResult;
+                   message[8] = (byte)(crcResult >> 8);
+                   c.Send(message);
+                   break;
+                case 4: //Reculer
+                   message[0] = 255;
+                   message[1] = 0x07;
+                   message[2] = 120;
+                   message[3] = 0;
+                   message[4] = 120;
+                   message[5] = 0;
+                   message[6] = 0;
+
+                   
+                   tmp[0] = 0x07;
+                   tmp[1] = 120;
+                   tmp[2] = 0;
+                   tmp[3] = 120;
+                   tmp[4] = 0;
+                   tmp[5] = 0;
+
+                   crcResult = Crc16(tmp);
+
+                   message[7] = (byte)crcResult;
+                   message[8] = (byte)(crcResult >> 8);
+                   c.Send(message);
+                    //}
+                    break;
+                default:
+                   message[0] = 255;
+                   message[1] = 0x07;
+                   message[2] = 0;
+                   message[3] = 0;
+                   message[4] = 0;
+                   message[5] = 0;
+                   message[6] = 0;
+
+                   
+                   tmp[0] = 0x07;
+                   tmp[1] = 0;
+                   tmp[2] = 0;
+                   tmp[3] = 0;
+                   tmp[4] = 0;
+                   tmp[5] = 0;
+
+                   crcResult = Crc16(tmp);
+
+                   message[7] = (byte)crcResult;
+                   message[8] = (byte)(crcResult >> 8);
+                   c.Send(message);
+                    break;
+            }
+        }
+
 
         private void Commandes_Load(object sender, EventArgs e)
         {
@@ -99,72 +238,68 @@ namespace Wifibot
         private void btnAvancer_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             sens = 1;
-            updateSpeed = 63;
-            InitializeTimer();
         }
 
         private void btnGauche_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             sens = 2;
-            updateSpeed = 63;
-            InitializeTimer();
         }
 
         private void btnDroite_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             sens = 3;
-            updateSpeed = 63;
-            InitializeTimer();
         }
 
         private void btnReculer_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             sens = 4;
-            updateSpeed = 0;
-            InitializeTimer();
-        }
-
-        private void button1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                button1.Text = "bite";
-            }
-            else if (e.Button == MouseButtons.Right)
-            {
-                button1.Text = "cul";
-            }
-            
         }
 
         private void btnAvancer_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            t1.Stop();
-            updateSpeed = 0;
+            sens = 0;
         }
 
         private void btnDroite_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            t1.Stop();
-            updateSpeed = 0;
+            sens = 0;
         }
 
         private void btnReculer_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            t1.Stop();
-            updateSpeed = 0;
+            sens = 0;
         }
 
         private void btnGauche_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            t1.Stop();
-            updateSpeed = 0;
+            sens = 0;
         }
 
-  
+        int Crc16(byte[] Adresse_tab)
+        {
+            int Crc = 0xFFFF;
+            int CptOctet;
+            int CptBit = 0;
+            int Taille_max = Adresse_tab.Length;
 
-        
-      
+            for (CptOctet = 0; CptOctet < Taille_max; CptOctet++)
+            {
+                Crc ^= Adresse_tab[CptOctet];
+                for (CptBit = 0; CptBit < 8; CptBit++)
+                {
+                    if (Crc % 2 != 0)
+                    {
+                        Crc = (Crc >> 1) ^ 0xA001;
 
+                    }
+                    else
+                    {
+                        Crc = (Crc >> 1);
+                    }
+
+                }
+            }
+            return (Crc);
+        }
     }
 }

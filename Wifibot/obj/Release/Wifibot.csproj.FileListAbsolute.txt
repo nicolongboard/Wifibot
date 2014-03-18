@@ -1,0 +1,13 @@
+C:\Users\TARZHULK\Documents\Visual Studio 2012\Projects\Wifibot\Wifibot\bin\Release\Wifibot.exe.config
+C:\Users\TARZHULK\Documents\Visual Studio 2012\Projects\Wifibot\Wifibot\bin\Release\Wifibot.exe
+C:\Users\TARZHULK\Documents\Visual Studio 2012\Projects\Wifibot\Wifibot\bin\Release\Wifibot.pdb
+C:\Users\TARZHULK\Documents\Visual Studio 2012\Projects\Wifibot\Wifibot\obj\Release\Wifibot.csprojResolveAssemblyReference.cache
+C:\Users\TARZHULK\Documents\Visual Studio 2012\Projects\Wifibot\Wifibot\obj\Release\Wifibot.Commandes.resources
+C:\Users\TARZHULK\Documents\Visual Studio 2012\Projects\Wifibot\Wifibot\obj\Release\Wifibot.Connexion.resources
+C:\Users\TARZHULK\Documents\Visual Studio 2012\Projects\Wifibot\Wifibot\obj\Release\Wifibot.Properties.Resources.resources
+C:\Users\TARZHULK\Documents\Visual Studio 2012\Projects\Wifibot\Wifibot\obj\Release\Wifibot.csproj.GenerateResource.Cache
+C:\Users\TARZHULK\Documents\Visual Studio 2012\Projects\Wifibot\Wifibot\obj\Release\Wifibot.exe
+C:\Users\TARZHULK\Documents\Visual Studio 2012\Projects\Wifibot\Wifibot\obj\Release\Wifibot.pdb
+C:\Users\nico\Desktop\Wifibot\Wifibot\bin\Release\Wifibot.exe.config
+C:\Users\nico\Desktop\Wifibot\Wifibot\obj\Release\Wifibot.exe
+C:\Users\nico\Desktop\Wifibot\Wifibot\obj\Release\Wifibot.pdb

@@ -1,0 +1,10 @@
+c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\bin\Debug\Wifibot.exe.config
+c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\bin\Debug\Wifibot.exe
+c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\bin\Debug\Wifibot.pdb
+c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\obj\Debug\Wifibot.csprojResolveAssemblyReference.cache
+c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\obj\Debug\Wifibot.Connexion.resources
+c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\obj\Debug\Wifibot.Properties.Resources.resources
+c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\obj\Debug\Wifibot.csproj.GenerateResource.Cache
+c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\obj\Debug\Wifibot.exe
+c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\obj\Debug\Wifibot.pdb
+c:\users\tarzhulk\documents\visual studio 2012\Projects\Wifibot\Wifibot\obj\Debug\Wifibot.Commandes.resources

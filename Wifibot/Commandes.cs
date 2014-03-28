@@ -309,5 +309,10 @@ namespace Wifibot
             this.Dispose();
         }
 
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
     }
 }

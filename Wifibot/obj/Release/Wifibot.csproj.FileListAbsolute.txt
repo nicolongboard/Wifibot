@@ -18,3 +18,13 @@ C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\obj\Release\Wifibot.Commandes
 C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\obj\Release\Wifibot.Connexion.resources
 C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\obj\Release\Wifibot.Properties.Resources.resources
 C:\Users\TARZHULK\Documents\GitHub\Wifibot\Wifibot\obj\Release\Wifibot.csproj.GenerateResource.Cache
+C:\Users\Nico\Documents\GitHub\Wifibot\Wifibot\bin\Release\Wifibot.exe.config
+C:\Users\Nico\Documents\GitHub\Wifibot\Wifibot\obj\Release\Wifibot.exe
+C:\Users\Nico\Documents\GitHub\Wifibot\Wifibot\obj\Release\Wifibot.pdb
+C:\Users\Nico\Documents\GitHub\Wifibot\Wifibot\bin\Release\Wifibot.exe
+C:\Users\Nico\Documents\GitHub\Wifibot\Wifibot\bin\Release\Wifibot.pdb
+C:\Users\Nico\Documents\GitHub\Wifibot\Wifibot\obj\Release\Wifibot.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Documents\GitHub\Wifibot\Wifibot\obj\Release\Wifibot.Commandes.resources
+C:\Users\Nico\Documents\GitHub\Wifibot\Wifibot\obj\Release\Wifibot.Connexion.resources
+C:\Users\Nico\Documents\GitHub\Wifibot\Wifibot\obj\Release\Wifibot.Properties.Resources.resources
+C:\Users\Nico\Documents\GitHub\Wifibot\Wifibot\obj\Release\Wifibot.csproj.GenerateResource.Cache

@@ -34,6 +34,7 @@
             this.btnReculer = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.webBrowser1Camera = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
             // btnAvancer
@@ -104,11 +105,22 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // webBrowser1Camera
+            // 
+            this.webBrowser1Camera.Location = new System.Drawing.Point(12, 12);
+            this.webBrowser1Camera.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1Camera.Name = "webBrowser1Camera";
+            this.webBrowser1Camera.Size = new System.Drawing.Size(543, 350);
+            this.webBrowser1Camera.TabIndex = 6;
+            this.webBrowser1Camera.Url = new System.Uri("http://192.158.255:8080", System.UriKind.Absolute);
+            this.webBrowser1Camera.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            // 
             // Commandes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 465);
+            this.Controls.Add(this.webBrowser1Camera);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.btnReculer);
@@ -131,5 +143,6 @@
         private System.Windows.Forms.Button btnReculer;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.WebBrowser webBrowser1Camera;
     }
 }
